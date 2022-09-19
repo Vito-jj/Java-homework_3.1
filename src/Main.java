@@ -1,12 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-
-        int ticetPrice = 500; // Цена билета
-        int bonusMilePrise = 20; // Стоимость одной бонусной мили
-
-        int bonusMiles = ticetPrice / bonusMilePrise; // Кол-во начисленных бонусных миль
-
-        System.out.println(("Количество начисленных миль:_") + (bonusMiles));
+        BonusMilesService service = new BonusMilesService();
+        int cost = 10_000;
+        int miles = service.calculate(cost);
+        System.out.println(miles);
 
     }
 }
